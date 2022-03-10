@@ -1,15 +1,15 @@
 ﻿/* Задача 13: Напишите программу, которая выводит третью цифру 
 заданного числа или сообщает, что третьей цифры нет.
 Пример: 645 -> 5    78 -> третьей цифры нет     32679 -> 6 */
-
-void Find3Num (int num)
+void Find3Number(int arg1)
 {
-    //функция должна преобразовывать перем num в строку и делать из нее массив,
-    // после чего выводить элемент с индексом 2
-    find = 
-}
-
+    string numString = Convert.ToString(arg1);
+    int numLen = numString.Length;
+    char[] arr;
+     arr = numString.ToCharArray(0, numLen);
+    Console.Write("Третья цифра - " + arr[2]);
+}     
 Console.WriteLine("Введите положительное целое число");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number <= 99) Console.WriteLine("третьей цифры нет");
-else Console.WriteLine("Третья цифра - " + Find3Num(number));
+int num = Convert.ToInt32(Console.ReadLine());
+if (num > 99) Find3Number(num);
+else Console.Write("третьей цифры нет");
